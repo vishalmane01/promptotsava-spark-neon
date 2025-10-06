@@ -9,7 +9,6 @@ import {
 } from "@/components/ui/table";
 
 interface LeaderboardEntry {
-  rank: number;
   teamName: string;
   round1: number;
   round2: number;
@@ -19,12 +18,21 @@ interface LeaderboardEntry {
 
 const Leaderboard = () => {
   const leaderboardData: LeaderboardEntry[] = [
-    { rank: 1, teamName: "Team SparkAI", round1: 10, round2: 9, round3: 10, total: 29 },
-    { rank: 2, teamName: "LightCoders", round1: 9, round2: 10, round3: 8, total: 27 },
-    { rank: 3, teamName: "NeuralDiya", round1: 8, round2: 8, round3: 9, total: 25 },
-    { rank: 4, teamName: "AI Illuminators", round1: 7, round2: 9, round3: 8, total: 24 },
-    { rank: 5, teamName: "Cyber Celebrators", round1: 8, round2: 7, round3: 7, total: 22 },
+    { teamName: "Team SparkAI", round1: 10, round2: 9, round3: 10, total: 29 },
+    { teamName: "LightCoders", round1: 9, round2: 10, round3: 8, total: 27 },
+    { teamName: "NeuralDiya", round1: 8, round2: 8, round3: 9, total: 75 },
+    { teamName: "AI Illuminators", round1: 7, round2: 9, round3: 8, total: 14 },
+    { teamName: "Cyber Celebrators", round1: 8, round2: 7, round3: 7, total: 22 },
+    { teamName: "AIMLSA", round1: 8, round2: 7, round3: 7, total: 55 },
   ];
+
+  // ✅ Sort by total (descending) and assign ranks dynamically
+  const sortedData = leaderboardData
+    .sort((a, b) => b.total - a.total)
+    .map((entry, index) => ({
+      ...entry,
+      rank: index + 1,
+    }));
 
   const getMedalEmoji = (rank: number) => {
     switch (rank) {
@@ -73,7 +81,7 @@ const Leaderboard = () => {
             </TableRow>
           </TableHeader>
           <TableBody>
-            {leaderboardData.map((entry) => (
+            {sortedData.map((entry) => (
               <TableRow
                 key={entry.rank}
                 className={`border-b border-border/20 hover:bg-foreground/5 transition-colors ${getRankClass(
