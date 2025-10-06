@@ -53,23 +53,23 @@ const Leaderboard = () => {
   };
 
   return (
-    <section id="leaderboard" className="py-20 px-4 max-w-7xl mx-auto">
-      <div className="flex items-center justify-center gap-4 mb-12">
-        <Trophy className="w-12 h-12 text-primary animate-glow-pulse" />
-        <h2 className="text-5xl font-bold text-glow-cyan">Leaderboard</h2>
-        <Trophy className="w-12 h-12 text-primary animate-glow-pulse" />
+    <section id="leaderboard" className="py-12 sm:py-16 md:py-20 px-4 max-w-7xl mx-auto">
+      <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 mb-8 sm:mb-10 md:mb-12">
+        <Trophy className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-primary animate-glow-pulse" />
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-glow-cyan">Leaderboard</h2>
+        <Trophy className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-primary animate-glow-pulse" />
       </div>
 
-      <div className="glass-card border-2 border-primary/50 overflow-hidden">
+      <div className="glass-card border-2 border-primary/50 overflow-x-auto">
         <Table>
           <TableHeader>
             <TableRow className="border-b border-primary/30 hover:bg-transparent">
-              <TableHead className="text-primary font-bold text-lg text-glow-cyan">Rank</TableHead>
-              <TableHead className="text-primary font-bold text-lg text-glow-cyan">Team Name</TableHead>
-              <TableHead className="text-center text-primary font-bold text-lg text-glow-cyan">R1</TableHead>
-              <TableHead className="text-center text-primary font-bold text-lg text-glow-cyan">R2</TableHead>
-              <TableHead className="text-center text-primary font-bold text-lg text-glow-cyan">R3</TableHead>
-              <TableHead className="text-center text-primary font-bold text-lg text-glow-cyan">Total</TableHead>
+              <TableHead className="text-primary font-bold text-sm sm:text-base md:text-lg text-glow-cyan whitespace-nowrap">Rank</TableHead>
+              <TableHead className="text-primary font-bold text-sm sm:text-base md:text-lg text-glow-cyan whitespace-nowrap">Team Name</TableHead>
+              <TableHead className="text-center text-primary font-bold text-sm sm:text-base md:text-lg text-glow-cyan">R1</TableHead>
+              <TableHead className="text-center text-primary font-bold text-sm sm:text-base md:text-lg text-glow-cyan">R2</TableHead>
+              <TableHead className="text-center text-primary font-bold text-sm sm:text-base md:text-lg text-glow-cyan">R3</TableHead>
+              <TableHead className="text-center text-primary font-bold text-sm sm:text-base md:text-lg text-glow-cyan">Total</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
@@ -80,15 +80,15 @@ const Leaderboard = () => {
                   entry.rank
                 )}`}
               >
-                <TableCell className="font-semibold text-lg">
-                  <span className="mr-2">{getMedalEmoji(entry.rank)}</span>
+                <TableCell className="font-semibold text-sm sm:text-base md:text-lg whitespace-nowrap">
+                  <span className="mr-1 sm:mr-2">{getMedalEmoji(entry.rank)}</span>
                   {entry.rank}
                 </TableCell>
-                <TableCell className="font-semibold">{entry.teamName}</TableCell>
-                <TableCell className="text-center">{entry.round1}</TableCell>
-                <TableCell className="text-center">{entry.round2}</TableCell>
-                <TableCell className="text-center">{entry.round3}</TableCell>
-                <TableCell className="text-center font-bold text-lg">{entry.total}</TableCell>
+                <TableCell className="font-semibold text-sm sm:text-base whitespace-nowrap">{entry.teamName}</TableCell>
+                <TableCell className="text-center text-sm sm:text-base">{entry.round1}</TableCell>
+                <TableCell className="text-center text-sm sm:text-base">{entry.round2}</TableCell>
+                <TableCell className="text-center text-sm sm:text-base">{entry.round3}</TableCell>
+                <TableCell className="text-center font-bold text-sm sm:text-base md:text-lg">{entry.total}</TableCell>
               </TableRow>
             ))}
           </TableBody>

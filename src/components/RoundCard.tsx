@@ -1,82 +1,46 @@
-import { useState } from "react";
-import { ChevronDown } from "lucide-react";
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
 interface RoundCardProps {
   number: number;
   title: string;
   description: string;
-  rules: string[];
-  task: string;
   color: "cyan" | "purple" | "pink";
   icon: React.ReactNode;
+  link: string;
 }
 
-const RoundCard = ({ number, title, description, rules, task, color, icon }: RoundCardProps) => {
-  const [isExpanded, setIsExpanded] = useState(false);
-
+const RoundCard = ({ number, title, description, color, icon, link }: RoundCardProps) => {
   const colorClasses = {
-    cyan: "border-primary text-glow-cyan hover:border-glow-cyan",
-    purple: "border-secondary text-glow-purple hover:border-glow-purple",
-    pink: "border-accent text-glow-pink hover:border-glow-pink",
+    cyan: "border-primary text-glow-cyan hover:border-glow-cyan hover:scale-105",
+    purple: "border-secondary text-glow-purple hover:border-glow-purple hover:scale-105",
+    pink: "border-accent text-glow-pink hover:border-glow-pink hover:scale-105",
   };
 
   return (
-    <Card
-      className={`glass-card border-2 ${colorClasses[color]} transition-all duration-500 cursor-pointer overflow-hidden ${
-        isExpanded ? "scale-105" : ""
-      }`}
-      onClick={() => setIsExpanded(!isExpanded)}
-    >
-      <div className="p-6">
-        {/* Header */}
-        <div className="flex items-center justify-between mb-4">
-          <div className="flex items-center gap-4">
-            <div className="text-4xl">{icon}</div>
-            <div>
-              <p className="text-sm text-muted-foreground font-mono">Round {number}</p>
-              <h3 className="text-2xl font-bold">{title}</h3>
+    <Link to={link}>
+      <Card
+        className={`glass-card border-2 ${colorClasses[color]} transition-all duration-300 cursor-pointer h-full`}
+      >
+        <div className="p-4 sm:p-6">
+          {/* Header */}
+          <div className="flex items-start justify-between mb-4 gap-2">
+            <div className="flex items-start gap-3 sm:gap-4 flex-1">
+              <div className="text-3xl sm:text-4xl flex-shrink-0">{icon}</div>
+              <div className="min-w-0">
+                <p className="text-xs sm:text-sm text-muted-foreground font-mono">Round {number}</p>
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold break-words">{title}</h3>
+              </div>
             </div>
+            <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0 mt-1" />
           </div>
-          <ChevronDown
-            className={`w-6 h-6 transition-transform duration-300 ${
-              isExpanded ? "rotate-180" : ""
-            }`}
-          />
+
+          {/* Description */}
+          <p className="text-sm sm:text-base text-muted-foreground">{description}</p>
         </div>
-
-        {/* Description (always visible) */}
-        <p className="text-muted-foreground mb-4">{description}</p>
-
-        {/* Expanded Content */}
-        <div
-          className={`transition-all duration-500 ${
-            isExpanded ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
-          } overflow-hidden`}
-        >
-          <div className="pt-4 border-t border-border/50 space-y-4">
-            {/* Rules */}
-            <div>
-              <h4 className="font-semibold text-lg mb-2 text-foreground/90">Rules:</h4>
-              <ul className="space-y-1 text-muted-foreground">
-                {rules.map((rule, index) => (
-                  <li key={index} className="flex items-start gap-2">
-                    <span className="text-primary">•</span>
-                    <span>{rule}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Task */}
-            <div>
-              <h4 className="font-semibold text-lg mb-2 text-foreground/90">Task:</h4>
-              <p className="text-muted-foreground italic">{task}</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </Card>
+      </Card>
+    </Link>
   );
 };
 
