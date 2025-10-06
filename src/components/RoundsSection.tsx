@@ -1,4 +1,4 @@
-import { Zap, Sparkles, Trophy } from "lucide-react";
+import { Zap, Sparkles, Trophy, Star } from "lucide-react";
 import RoundCard from "./RoundCard";
 
 const RoundsSection = () => {
@@ -27,6 +27,14 @@ const RoundsSection = () => {
       icon: <Trophy className="w-8 h-8 sm:w-10 sm:h-10 text-accent" />,
       link: "/round-3",
     },
+    {
+      number: 4,
+      title: "Mystery Round",
+      description: "An exciting surprise challenge awaits! Stay tuned for more details.",
+      color: "gold" as const,
+      icon: <Star className="w-8 h-8 sm:w-10 sm:h-10 text-[hsl(var(--neon-gold))]" />,
+      comingSoon: true,
+    },
   ];
 
   return (
@@ -38,7 +46,7 @@ const RoundsSection = () => {
         Click on each card to view the complete challenge details
       </p>
       
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
         {rounds.map((round) => (
           <RoundCard key={round.number} {...round} />
         ))}
