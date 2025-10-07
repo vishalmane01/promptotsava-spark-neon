@@ -35,19 +35,6 @@ const HeroSection = () => {
 />
 
         </div>
-
-        {/* Collaboration Section */}
-<div className="text-center mt-4 sm:mt-6">
-  <p className="text-base sm:text-lg md:text-xl text-gray-300">
-    In collaboration with
-  </p>
-  <img
-    src="https://res.cloudinary.com/dcbdnrlft/image/upload/v1759816082/collabLogo_jgpvs3.png"
-    alt="Collaborating Logo"
-    className="w-56 sm:w-72 md:w-80 lg:w-96 xl:w-[28rem] mx-auto mt-2 object-contain drop-shadow-[0_0_35px_rgba(0,255,255,0.7)]"
-  />
-</div>
-
       </div>
 
       {/* --- Hero Content (Below Header) --- */}

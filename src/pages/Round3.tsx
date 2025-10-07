@@ -1,214 +1,125 @@
-import { ArrowLeft, Trophy } from "lucide-react";
+import { ArrowLeft, Clock, Trophy } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import ParticleBackground from "@/components/ParticleBackground";
 
 const Round3 = () => {
   return (
-    <div className="relative min-h-screen">
+    <div className="relative min-h-screen overflow-hidden text-white">
       <ParticleBackground />
-      
-      <div className="max-w-5xl mx-auto px-4 py-8 sm:py-12">
+
+      <div className="max-w-6xl mx-auto px-4 py-8 sm:py-12">
+        {/* Back Button */}
         <Link to="/">
-          <Button variant="outline" className="mb-6 sm:mb-8 border-accent text-accent hover:bg-accent/10">
+          <Button
+            variant="outline"
+            className="mb-6 sm:mb-10 border-pink-400 text-pink-400 hover:bg-pink-400/10 transition-all hover:scale-105"
+          >
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Home
           </Button>
         </Link>
 
         {/* Header */}
-        <div className="text-center mb-8 sm:mb-12">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-glow-pink mb-4">
-            🏆 Round 3: Pitch Perfect
+        <div className="text-center mb-12">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent animate-pulse drop-shadow-[0_0_25px_rgba(255,0,255,0.6)]">
+            🏆 Round 3: Prompted Realities
           </h1>
-          <div className="flex items-center justify-center gap-2 text-muted-foreground">
-            <Trophy className="w-5 h-5" />
-            <span>Grand Finale - Total: 50 Marks</span>
+          <div className="flex flex-wrap justify-center gap-6 mt-6 text-gray-300">
+            <div className="flex items-center gap-2">
+              <Clock className="w-5 h-5 text-cyan-400" />
+              <span>Duration: 1 Hour</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Trophy className="w-5 h-5 text-pink-400" />
+              <span>Total: 40 Marks</span>
+            </div>
           </div>
         </div>
 
         {/* Description */}
-        <div className="glass-card border-2 border-accent/50 p-6 sm:p-8 mb-8">
-          <h2 className="text-2xl sm:text-3xl font-bold text-glow-pink mb-4">Choose Any 1 Task</h2>
-          <p className="text-muted-foreground leading-relaxed">
-            In this grand finale, teams will showcase their creative vision through a comprehensive pitch presentation combining AI-generated content and strategic thinking.
-          </p>
+        <div className="p-8 rounded-2xl bg-gradient-to-br from-purple-900/40 to-pink-900/20 border border-pink-500/30 backdrop-blur-md shadow-[0_0_25px_rgba(255,0,255,0.3)] mb-12">
+          <h2 className="text-3xl font-bold mb-4 text-pink-400">📖 Description</h2>
+            <p className="text-gray-300 leading-relaxed mb-3">
+              The grand finale where creativity meets intelligence ⚡. In <span className="text-pink-300 font-semibold">Round 3: Prompted Realities</span>, 
+              teams will push the boundaries of imagination and technology through AI-driven storytelling and design.  
+              Participants must create a compelling visual or narrative experience that reflects originality, innovation, and prompt mastery.  
+              This round tests how well teams can transform simple ideas into powerful, AI-generated realities that captivate and inspire. 🌐
+            </p>
         </div>
 
-        {/* Tasks */}
-        <div className="space-y-6 mb-8">
-          {/* Task 1 */}
-          <div className="glass-card border-2 border-primary/50 p-6 sm:p-8">
-            <h3 className="text-2xl font-bold text-primary mb-4">🔹 Task 1: Smart India Diwali 2030</h3>
-            <div className="space-y-4">
-              <div>
-                <h4 className="font-semibold text-lg text-foreground/90 mb-2">Scenario:</h4>
-                <p className="text-muted-foreground">It's 2030, and India is celebrating a tech-driven eco-friendly Diwali.</p>
-              </div>
-              <div>
-                <h4 className="font-semibold text-lg text-foreground/90 mb-2">Task:</h4>
-                <ul className="space-y-2 ml-4">
-                  <li className="flex items-start gap-2">
-                    <span className="text-primary mt-1">•</span>
-                    <span className="text-muted-foreground">Generate an AI image of futuristic Diwali (solar diyas, AR rangolis, drone firecrackers).</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-primary mt-1">•</span>
-                    <span className="text-muted-foreground">Create a short plan/pitch (5 sentences) on how AI can make Diwali sustainable.</span>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="font-semibold text-lg text-foreground/90 mb-2">Pitch:</h4>
-                <p className="text-muted-foreground">Present your "Smart Diwali startup" idea in 5 minutes.</p>
-              </div>
-            </div>
-          </div>
+        {/* Task Section */}
+        <div className="p-8 rounded-2xl bg-gradient-to-br from-cyan-900/30 to-indigo-900/10 border border-cyan-500/30 backdrop-blur-md shadow-[0_0_25px_rgba(0,255,255,0.2)] mb-12">
+          <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-cyan-300 via-blue-300 to-pink-300 bg-clip-text text-transparent">
+            🧠 Task: Visual Storytelling Challenge – “Pixels that Speak”
+          </h2>
 
-          {/* Task 2 */}
-          <div className="glass-card border-2 border-secondary/50 p-6 sm:p-8">
-            <h3 className="text-2xl font-bold text-secondary mb-4">🔹 Task 2: AI as Lord Rama's Advisor</h3>
-            <div className="space-y-4">
-              <div>
-                <h4 className="font-semibold text-lg text-foreground/90 mb-2">Scenario:</h4>
-                <p className="text-muted-foreground">Imagine AI existed in the Ramayana during Diwali.</p>
-              </div>
-              <div>
-                <h4 className="font-semibold text-lg text-foreground/90 mb-2">Task:</h4>
-                <p className="text-muted-foreground mb-2">Craft prompts where Gemini gives advice to Rama on:</p>
-                <ul className="space-y-2 ml-4">
-                  <li className="flex items-start gap-2">
-                    <span className="text-secondary mt-1">•</span>
-                    <span className="text-muted-foreground">Strategy for war</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-secondary mt-1">•</span>
-                    <span className="text-muted-foreground">Communication with Ayodhya citizens</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-secondary mt-1">•</span>
-                    <span className="text-muted-foreground">Managing the grand welcome (eco-friendly celebrations)</span>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="font-semibold text-lg text-foreground/90 mb-2">Pitch:</h4>
-                <p className="text-muted-foreground">Present the best "AI + Mythology" solutions as if they were real.</p>
-              </div>
-            </div>
+          <div className="space-y-4 text-gray-300">
+            <p>
+              You are a <span className="text-cyan-300 font-semibold">visual narrator</span> in the age of AI.
+              Your challenge is to tell a complete story purely through <b>AI-generated images</b> — no edits, no captions,
+              just prompts.
+            </p>
+            <ul className="space-y-2 ml-4">
+              <li>• Generate <b>exactly 10 images</b> forming a clear narrative (intro → climax → resolution).</li>
+              <li>• Maintain identical characters, style, and environment throughout.</li>
+              <li>• Use prompt design only — no Photoshop or post-editing allowed.</li>
+            </ul>
           </div>
+        </div>
 
-          {/* Task 3 */}
-          <div className="glass-card border-2 border-accent/50 p-6 sm:p-8">
-            <h3 className="text-2xl font-bold text-accent mb-4">🔹 Task 3: Global Diwali Festival</h3>
-            <div className="space-y-4">
-              <div>
-                <h4 className="font-semibold text-lg text-foreground/90 mb-2">Scenario:</h4>
-                <p className="text-muted-foreground">The UN declares Diwali as a global festival of light and unity.</p>
-              </div>
-              <div>
-                <h4 className="font-semibold text-lg text-foreground/90 mb-2">Task:</h4>
-                <ul className="space-y-2 ml-4">
-                  <li className="flex items-start gap-2">
-                    <span className="text-accent mt-1">•</span>
-                    <span className="text-muted-foreground">Prompt Gemini to generate visuals of Diwali celebrations in New York, Tokyo, and Cairo.</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-accent mt-1">•</span>
-                    <span className="text-muted-foreground">Write a speech (max 100 words) for a UN representative about Diwali's values.</span>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="font-semibold text-lg text-foreground/90 mb-2">Pitch:</h4>
-                <p className="text-muted-foreground">Deliver the speech + show visuals like a cultural ambassador.</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Task 4 */}
-          <div className="glass-card border-2 border-primary/50 p-6 sm:p-8">
-            <h3 className="text-2xl font-bold text-primary mb-4">🔹 Task 4: AI Startup for Festivals</h3>
-            <div className="space-y-4">
-              <div>
-                <h4 className="font-semibold text-lg text-foreground/90 mb-2">Scenario:</h4>
-                <p className="text-muted-foreground">You are launching a startup called "FestAI" – an AI tool for Indian festivals.</p>
-              </div>
-              <div>
-                <h4 className="font-semibold text-lg text-foreground/90 mb-2">Task:</h4>
-                <p className="text-muted-foreground mb-2">Use prompts to make Gemini:</p>
-                <ul className="space-y-2 ml-4">
-                  <li className="flex items-start gap-2">
-                    <span className="text-primary mt-1">•</span>
-                    <span className="text-muted-foreground">Generate a logo + tagline for FestAI.</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-primary mt-1">•</span>
-                    <span className="text-muted-foreground">Suggest 3 features (ex: AI rangoli designer, digital shayari generator, eco-fireworks AR).</span>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="font-semibold text-lg text-foreground/90 mb-2">Pitch:</h4>
-                <p className="text-muted-foreground">Present FestAI as if convincing investors.</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Task 5 */}
-          <div className="glass-card border-2 border-secondary/50 p-6 sm:p-8">
-            <h3 className="text-2xl font-bold text-secondary mb-4">🔹 Task 5: Diwali for Social Good</h3>
-            <div className="space-y-4">
-              <div>
-                <h4 className="font-semibold text-lg text-foreground/90 mb-2">Scenario:</h4>
-                <p className="text-muted-foreground">How can Diwali celebrations also solve real social issues (pollution, waste, inclusivity)?</p>
-              </div>
-              <div>
-                <h4 className="font-semibold text-lg text-foreground/90 mb-2">Task:</h4>
-                <p className="text-muted-foreground mb-2">Prompt Gemini to generate:</p>
-                <ul className="space-y-2 ml-4">
-                  <li className="flex items-start gap-2">
-                    <span className="text-secondary mt-1">•</span>
-                    <span className="text-muted-foreground">A poster design for "Green Diwali 2025."</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-secondary mt-1">•</span>
-                    <span className="text-muted-foreground">A campaign slogan.</span>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="font-semibold text-lg text-foreground/90 mb-2">Pitch:</h4>
-                <p className="text-muted-foreground">Present it like a social awareness campaign.</p>
-              </div>
-            </div>
-          </div>
+        {/* Rules & Guidelines */}
+        <div className="p-8 rounded-2xl bg-gradient-to-br from-purple-800/30 to-pink-900/20 border border-purple-500/30 backdrop-blur-md shadow-[0_0_25px_rgba(255,0,255,0.3)] mb-12">
+          <h2 className="text-3xl font-bold mb-6 text-pink-300">📌 Rules & Guidelines</h2>
+          <ul className="space-y-3 text-gray-300">
+            <li>• Story must have emotional and visual continuity.</li>
+            <li>• Lighting, color, and mood should evolve naturally with the story.</li>
+            <li>• Consistent style is mandatory (e.g., cyberpunk, watercolor, cinematic).</li>
+            <li>• No textual overlays or manual edits are allowed.</li>
+            <li>• Only Gemini or other AI prompt tools can be used.</li>
+            <li>• Team must submit all 10 frames as a cohesive sequence.</li>
+          </ul>
         </div>
 
         {/* Judging Criteria */}
-        <div className="glass-card border-2 border-accent/50 p-6 sm:p-8">
-          <h2 className="text-2xl sm:text-3xl font-bold text-glow-pink mb-6">🎇 Judging Criteria (Total: 50 Marks)</h2>
+        <div className="p-8 rounded-2xl bg-gradient-to-br from-purple-900/40 to-blue-900/30 border border-purple-500/30 shadow-[0_0_25px_rgba(150,0,255,0.3)] backdrop-blur-md mb-12">
+          <h2 className="text-3xl font-bold mb-8 text-purple-300">⚖️ Judging Criteria (40 Marks)</h2>
           <div className="grid sm:grid-cols-2 gap-6">
-            <div className="bg-background/30 p-4 rounded-lg border border-primary/30">
-              <h3 className="text-lg font-semibold text-primary mb-2">Prompting Skill</h3>
-              <p className="text-muted-foreground text-sm mb-2">15 Marks</p>
-              <p className="text-muted-foreground text-sm">Clarity and innovation in prompts</p>
-            </div>
-            <div className="bg-background/30 p-4 rounded-lg border border-secondary/30">
-              <h3 className="text-lg font-semibold text-secondary mb-2">Creativity & Innovation</h3>
-              <p className="text-muted-foreground text-sm mb-2">15 Marks</p>
-              <p className="text-muted-foreground text-sm">Unique ideas and imagination</p>
-            </div>
-            <div className="bg-background/30 p-4 rounded-lg border border-accent/30">
-              <h3 className="text-lg font-semibold text-accent mb-2">Presentation</h3>
-              <p className="text-muted-foreground text-sm mb-2">10 Marks</p>
-              <p className="text-muted-foreground text-sm">Confidence, flow, and engagement</p>
-            </div>
-            <div className="bg-background/30 p-4 rounded-lg border border-primary/30">
-              <h3 className="text-lg font-semibold text-primary mb-2">Relevance to Theme</h3>
-              <p className="text-muted-foreground text-sm mb-2">10 Marks</p>
-              <p className="text-muted-foreground text-sm">Diwali connection and cultural context</p>
-            </div>
+            {[
+              {
+                title: "Prompt Precision",
+                color: "text-cyan-300",
+                marks: "10",
+                desc: "Well-structured prompts ensuring visual coherence and clarity."
+              },
+              {
+                title: "Visual Consistency",
+                color: "text-pink-300",
+                marks: "10",
+                desc: "Continuity in character design, lighting, and art style."
+              },
+              {
+                title: "Narrative Depth",
+                color: "text-purple-300",
+                marks: "10",
+                desc: "Story flow and emotion through visuals alone."
+              },
+              {
+                title: "Creativity & Originality",
+                color: "text-pink-300",
+                marks: "10",
+                desc: "Innovative concept and imaginative storytelling."
+              },
+            ].map((crit, i) => (
+              <div
+                key={i}
+                className="p-4 rounded-lg border border-white/10 bg-background/20 hover:shadow-[0_0_20px_rgba(255,255,255,0.2)] transition-all"
+              >
+                <h3 className={`text-lg font-semibold ${crit.color} mb-1`}>{crit.title}</h3>
+                <p className="text-gray-400 text-sm mb-1">{crit.marks} Marks</p>
+                <p className="text-gray-300 text-sm">{crit.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
