@@ -23,7 +23,7 @@ const Leaderboard = () => {
     { teamName: "NeuralDiya", round1: 8, round2: 8, round3: 9, total: 75 },
     { teamName: "AI Illuminators", round1: 7, round2: 9, round3: 8, total: 14 },
     { teamName: "Cyber Celebrators", round1: 8, round2: 7, round3: 7, total: 22 },
-    { teamName: "AIMLSA", round1: 8, round2: 7, round3: 7, total: 55 },
+    { teamName: "AIMLSA", round1: 8, round2: 7, round3: 7, total: 15 },
   ];
 
   // ✅ Sort by total (descending) and assign ranks dynamically

@@ -1,156 +1,146 @@
-import { ArrowLeft, Clock, Trophy, AlertCircle } from "lucide-react";
+import { ArrowLeft, Clock, Trophy, AlertCircle, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import ParticleBackground from "@/components/ParticleBackground";
 
 const Round1 = () => {
   return (
-    <div className="relative min-h-screen">
+    <div className="relative min-h-screen overflow-hidden">
       <ParticleBackground />
-      
-      <div className="max-w-5xl mx-auto px-4 py-8 sm:py-12">
+
+      {/* --- Container --- */}
+      <div className="max-w-6xl mx-auto px-4 py-10 sm:py-14">
+        {/* Back Button */}
         <Link to="/">
-          <Button variant="outline" className="mb-6 sm:mb-8 border-primary text-primary hover:bg-primary/10">
+          <Button
+            variant="outline"
+            className="mb-8 border-primary/70 text-primary hover:bg-primary/10"
+          >
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Home
           </Button>
         </Link>
 
         {/* Header */}
-        <div className="text-center mb-8 sm:mb-12">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-glow-cyan mb-4">
-            🪔 Round 1: Prompt Sprint
+        <div className="text-center mb-14">
+          <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-text-glow drop-shadow-[0_0_30px_rgba(255,255,255,0.2)]">
+            Round 1: Prompt Sprint
           </h1>
-          <div className="flex flex-wrap items-center justify-center gap-4 text-muted-foreground">
+          <div className="flex flex-wrap justify-center items-center gap-6 mt-6 text-gray-300">
             <div className="flex items-center gap-2">
-              <Clock className="w-5 h-5" />
-              <span>Time Limit: 1 hour</span>
+              <Clock className="w-5 h-5 text-cyan-400" />
+              <span>Time Limit: 45 minutes</span>
             </div>
             <div className="flex items-center gap-2">
-              <Trophy className="w-5 h-5" />
+              <Trophy className="w-5 h-5 text-yellow-400" />
               <span>Total: 40 Marks</span>
             </div>
           </div>
         </div>
 
-        {/* Description */}
-        <div className="glass-card border-2 border-primary/50 p-6 sm:p-8 mb-8">
-          <h2 className="text-2xl sm:text-3xl font-bold text-glow-purple mb-4">Description</h2>
-          <p className="text-muted-foreground leading-relaxed mb-4">
-            In this round, participants will test their prompt engineering speed and creativity. Each team will be given one image generation task and one video generation task based on the Diwali theme. Using Gemini, teams must carefully craft prompts to produce the most clear, creative, and relevant AI outputs.
+        {/* Description Section */}
+        <div className="relative mb-14 p-8 rounded-2xl border border-cyan-500/40 bg-white/5 backdrop-blur-md shadow-[0_0_40px_rgba(0,255,255,0.2)]">
+          <div className="absolute -top-3 left-6 bg-cyan-500 text-black px-3 py-1 rounded-full text-sm font-semibold flex items-center gap-1">
+            <Sparkles className="w-4 h-4" /> About
+          </div>
+          <p className="text-gray-300 leading-relaxed text-lg">
+            In this round, participants will race to craft the most creative and
+            effective AI prompts. Each team should complete all challenge based on a futuristic Diwali theme.
+            Using Google Gemini, teams must translate imagination into reality —
+            with precision, creativity, and AI intuition.
           </p>
-          <p className="text-muted-foreground leading-relaxed mb-4">
-            This is a fast-paced elimination round designed to check how well participants can convert imagination into reality through precise prompts.
-          </p>
-          <div className="flex items-start gap-2 bg-destructive/10 border border-destructive/50 rounded-lg p-4">
-            <AlertCircle className="w-5 h-5 text-destructive mt-0.5 flex-shrink-0" />
-            <p className="text-destructive font-semibold">Only the top-scoring teams will advance to the next round.</p>
+
+          <div className="flex items-start gap-3 mt-6 bg-red-500/10 border border-red-500/40 rounded-lg p-4">
+            <AlertCircle className="w-5 h-5 text-red-400 mt-0.5" />
+            <p className="text-red-400 font-semibold">
+              Only top-performing teams will qualify for the next round!
+            </p>
           </div>
         </div>
 
-        {/* Tasks */}
-        <div className="glass-card border-2 border-secondary/50 p-6 sm:p-8 mb-8">
-          <h2 className="text-2xl sm:text-3xl font-bold text-glow-purple mb-6">📝 Tasks (Choose 1 Image + 1 Video)</h2>
-          
-          <div className="mb-8">
-            <h3 className="text-xl font-semibold text-primary mb-4">Image Options (Pick Any 1):</h3>
-            <ul className="space-y-3 ml-4">
-              <li className="flex items-start gap-3">
-                <span className="text-primary mt-1">•</span>
-                <span className="text-muted-foreground">Generate an image of Diwali in the year 2025 with futuristic eco-friendly celebrations.</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-primary mt-1">•</span>
-                <span className="text-muted-foreground">Generate a unique rangoli design inspired by neural networks and traditional Diwali motifs.</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-primary mt-1">•</span>
-                <span className="text-muted-foreground">Visualize how humans might celebrate Diwali on Mars with astronauts lighting diyas inside the space station.</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-primary mt-1">•</span>
-                <span className="text-muted-foreground">Generate an image of Diwali in futuristic Ayodhya city.</span>
-              </li>
-            </ul>
+        {/* Tasks Section */}
+        <div className="relative mb-14 p-8 rounded-2xl border border-purple-500/40 bg-white/5 backdrop-blur-md shadow-[0_0_40px_rgba(255,0,255,0.2)]">
+          <div className="absolute -top-3 left-6 bg-purple-500 text-black px-3 py-1 rounded-full text-sm font-semibold flex items-center gap-1">
+            🧠 Tasks
           </div>
-
-          <div>
-            <h3 className="text-xl font-semibold text-secondary mb-4">Video Options (Pick Any 1):</h3>
-            <ul className="space-y-3 ml-4">
-              <li className="flex items-start gap-3">
-                <span className="text-secondary mt-1">•</span>
-                <span className="text-muted-foreground">Animate a short clip of Lord Rama, Sita Maa, and Lakshmana entering Ayodhya – but in a futuristic flying chariot powered by AI.</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-secondary mt-1">•</span>
-                <span className="text-muted-foreground">Show robots and humans celebrating Diwali together in the year 2100.</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-secondary mt-1">•</span>
-                <span className="text-muted-foreground">Visualize astronauts celebrating Diwali on the Moon, lighting holographic diyas inside a space station.</span>
-              </li>
-            </ul>
-          </div>
+          <h2 className="text-2xl sm:text-3xl font-bold text-purple-400 mb-6">
+            Image Generation Challenges
+          </h2>
+          <ul className="space-y-4 text-gray-300 leading-relaxed">
+            <li>• Diwali in 2025 with futuristic eco-friendly celebrations.</li>
+            <li>• Rangoli design inspired by neural networks and AI patterns.</li>
+            <li>
+              • Diwali on Mars — astronauts lighting diyas in a space station.
+            </li>
+            <li>• Diwali celebration in a holographic Ayodhya city.</li>
+          </ul>
         </div>
 
         {/* Judging Criteria */}
-        <div className="glass-card border-2 border-accent/50 p-6 sm:p-8 mb-8">
-          <h2 className="text-2xl sm:text-3xl font-bold text-glow-pink mb-6">⚖️ Judging Criteria (Total: 40 Marks)</h2>
-          <div className="grid sm:grid-cols-2 gap-6">
-            <div className="bg-background/30 p-4 rounded-lg border border-primary/30">
-              <h3 className="text-lg font-semibold text-primary mb-2">Prompt Clarity</h3>
-              <p className="text-muted-foreground text-sm mb-2">10 Marks</p>
-              <p className="text-muted-foreground text-sm">Is the prompt specific, well-structured, and easy for AI to interpret?</p>
-            </div>
-            <div className="bg-background/30 p-4 rounded-lg border border-secondary/30">
-              <h3 className="text-lg font-semibold text-secondary mb-2">Creativity & Originality</h3>
-              <p className="text-muted-foreground text-sm mb-2">10 Marks</p>
-              <p className="text-muted-foreground text-sm">How unique and imaginative is the idea behind the prompt?</p>
-            </div>
-            <div className="bg-background/30 p-4 rounded-lg border border-accent/30">
-              <h3 className="text-lg font-semibold text-accent mb-2">Relevance to Theme</h3>
-              <p className="text-muted-foreground text-sm mb-2">10 Marks</p>
-              <p className="text-muted-foreground text-sm">Does the output strongly connect with the Diwali + futuristic/AI theme?</p>
-            </div>
-            <div className="bg-background/30 p-4 rounded-lg border border-primary/30">
-              <h3 className="text-lg font-semibold text-primary mb-2">Output Quality</h3>
-              <p className="text-muted-foreground text-sm mb-2">10 Marks</p>
-              <p className="text-muted-foreground text-sm">How well does the AI output reflect the intended vision?</p>
-            </div>
+        <div className="relative mb-14 p-8 rounded-2xl border border-pink-500/40 bg-white/5 backdrop-blur-md shadow-[0_0_40px_rgba(255,0,128,0.2)]">
+          <div className="absolute -top-3 left-6 bg-pink-500 text-black px-3 py-1 rounded-full text-sm font-semibold flex items-center gap-1">
+            ⚖️ Judging Criteria
+          </div>
+          <div className="grid sm:grid-cols-2 gap-8 mt-6">
+            {[
+              {
+                title: "Prompt Clarity",
+                color: "text-cyan-400",
+                marks: "10 Marks",
+                desc: "How precise and easy to interpret is your prompt?",
+              },
+              {
+                title: "Creativity & Originality",
+                color: "text-purple-400",
+                marks: "10 Marks",
+                desc: "How imaginative and unique are your prompt ideas?",
+              },
+              {
+                title: "Relevance to Theme",
+                color: "text-pink-400",
+                marks: "10 Marks",
+                desc: "Does it align with Diwali and futuristic/AI themes?",
+              },
+              {
+                title: "Output Quality",
+                color: "text-yellow-400",
+                marks: "10 Marks",
+                desc: "How well does the AI output match your vision?",
+              },
+            ].map((item, i) => (
+              <div
+                key={i}
+                className="p-5 rounded-xl border border-white/10 bg-black/20 hover:bg-black/30 transition-all duration-300"
+              >
+                <h3 className={`text-lg font-semibold mb-2 ${item.color}`}>
+                  {item.title}
+                </h3>
+                <p className="text-gray-400 text-sm mb-1">{item.marks}</p>
+                <p className="text-gray-300 text-sm">{item.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
 
-        {/* Rules */}
-        <div className="glass-card border-2 border-primary/50 p-6 sm:p-8">
-          <h2 className="text-2xl sm:text-3xl font-bold text-glow-cyan mb-6">📌 Rules</h2>
-          <ul className="space-y-3">
-            <li className="flex items-start gap-3">
-              <span className="text-primary mt-1">•</span>
-              <span className="text-muted-foreground">Each team must attempt 1 image task and 1 video task only.</span>
+        {/* Rules Section */}
+        <div className="relative p-8 rounded-2xl border border-cyan-500/40 bg-white/5 backdrop-blur-md shadow-[0_0_40px_rgba(0,255,255,0.2)]">
+          <div className="absolute -top-3 left-6 bg-cyan-500 text-black px-3 py-1 rounded-full text-sm font-semibold flex items-center gap-1">
+            📜 Rules
+          </div>
+          <ul className="space-y-4 text-gray-300 leading-relaxed mt-4">
+            <li>• Time limit: 1 hour total for both tasks.</li>
+            <li>• All prompts must be generated using Google Gemini.</li>
+            <li>
+              • Submit final outputs (screenshots or downloaded files) before
+              time ends.
             </li>
-            <li className="flex items-start gap-3">
-              <span className="text-primary mt-1">•</span>
-              <span className="text-muted-foreground">Time limit: 1 hour for both tasks.</span>
+            <li>
+              • Strictly no plagiarism or pre-made outputs — live generation
+              only.
             </li>
-            <li className="flex items-start gap-3">
-              <span className="text-primary mt-1">•</span>
-              <span className="text-muted-foreground">All prompts must be executed using Google Gemini only.</span>
-            </li>
-            <li className="flex items-start gap-3">
-              <span className="text-primary mt-1">•</span>
-              <span className="text-muted-foreground">Teams must submit their final outputs (screenshots or downloaded files) within the given time.</span>
-            </li>
-            <li className="flex items-start gap-3">
-              <span className="text-primary mt-1">•</span>
-              <span className="text-muted-foreground">Plagiarism or using pre-made AI outputs is strictly prohibited – only live-generated outputs will be accepted.</span>
-            </li>
-            <li className="flex items-start gap-3">
-              <span className="text-primary mt-1">•</span>
-              <span className="text-muted-foreground">Judges' decisions will be final and binding.</span>
-            </li>
-            <li className="flex items-start gap-3">
-              <span className="text-destructive mt-1">•</span>
-              <span className="text-destructive font-semibold">Elimination Rule: Bottom 30% of teams (based on scores) will be eliminated.</span>
+            <li>• Judges’ decision will be final.</li>
+            <li className="text-red-400 font-semibold">
+              • Elimination: Bottom 30% of teams will be disqualified.
             </li>
           </ul>
         </div>

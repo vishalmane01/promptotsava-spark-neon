@@ -18,7 +18,7 @@ const RoundsSection = () => {
       color: "purple" as const,
       icon: <Sparkles className="w-8 h-8 sm:w-10 sm:h-10 text-secondary" />,
       link: "/round-2",
-      comingSoon: true,
+      
     },
     {
       number: 3,
@@ -27,7 +27,7 @@ const RoundsSection = () => {
       color: "pink" as const,
       icon: <Trophy className="w-8 h-8 sm:w-10 sm:h-10 text-accent" />,
       link: "/round-3",
-      comingSoon: true,
+     
     },
     {
       number: 4,
