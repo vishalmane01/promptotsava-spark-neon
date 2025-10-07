@@ -28,17 +28,16 @@ const HeroSection = () => {
           </div>
 
           {/* Right Logo */}
-<img
-  src="https://res.cloudinary.com/dcbdnrlft/image/upload/v1759816008/rightLogo_w9h0jn.png"
-  alt="Right Logo"
-  className="w-20 sm:w-28 md:w-36 lg:w-44 object-contain"
-/>
-
+          <img
+            src="https://res.cloudinary.com/dcbdnrlft/image/upload/v1759816008/rightLogo_w9h0jn.png"
+            alt="Right Logo"
+            className="w-20 sm:w-28 md:w-36 lg:w-44 object-contain"
+          />
         </div>
       </div>
 
       {/* --- Hero Content (Below Header) --- */}
-      <div className="mt-[24rem] sm:mt-[26rem] md:mt-[29rem] flex flex-col items-center justify-center">
+      <div className="mt-[10rem] sm:mt-[12rem] md:mt-[14rem] flex flex-col items-center justify-center">
         {/* Event Title */}
         <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold text-glow-cyan mb-4 tracking-widest px-2">
           PROMPT UTSAV
@@ -57,6 +56,7 @@ const HeroSection = () => {
           >
             Explore Rounds
           </Button>
+
           <Button
             onClick={() => scrollToSection("leaderboard")}
             className="px-10 py-5 sm:px-12 sm:py-6 text-lg sm:text-xl font-semibold bg-secondary text-secondary-foreground border-2 border-secondary hover:bg-secondary/10 hover:text-secondary transition-all duration-300 border-glow-purple w-full sm:w-auto"
