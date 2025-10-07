@@ -1,5 +1,6 @@
 import { Zap, Sparkles, Trophy } from "lucide-react";
 import RoundCard from "./RoundCard";
+import { Link } from "react-router-dom";
 
 const RoundsSection = () => {
   const rounds = [
@@ -51,7 +52,7 @@ const RoundsSection = () => {
         {rounds.map((round) => (
           <div
             key={round.number}
-            className={`relative group flex flex-col justify-between rounded-3xl border border-white/10 p-6 sm:p-8 text-center backdrop-blur-md bg-gradient-to-br from-black/20 to-black/10 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105`}
+            className="relative group flex flex-col justify-between rounded-3xl border border-white/10 p-6 sm:p-8 text-center backdrop-blur-md bg-gradient-to-br from-black/20 to-black/10 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
           >
             <div className="flex justify-center mb-4">{round.icon}</div>
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-3">
@@ -66,12 +67,12 @@ const RoundsSection = () => {
                 Locked
               </span>
             ) : (
-              <a
-                href={round.link}
+              <Link
+                to={round.link}
                 className="inline-block px-6 py-3 text-sm sm:text-base font-medium rounded-xl bg-gradient-to-r from-cyan-400 to-blue-500 text-black hover:opacity-90 transition"
               >
                 View Details
-              </a>
+              </Link>
             )}
           </div>
         ))}
