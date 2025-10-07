@@ -14,7 +14,7 @@ const HeroSection = () => {
         <div className="w-full flex items-center justify-between px-2 sm:px-6">
           {/* Left Logo */}
           <img
-            src="/leftLogo.png"
+            src="https://res.cloudinary.com/dcbdnrlft/image/upload/v1759816077/leftLogo_fxysex.png"
             alt="Left Logo"
             className="w-16 sm:w-24 md:w-28 lg:w-32 object-contain"
           />
@@ -29,7 +29,7 @@ const HeroSection = () => {
 
           {/* Right Logo */}
 <img
-  src="/rightLogo.png"
+  src="https://res.cloudinary.com/dcbdnrlft/image/upload/v1759816008/rightLogo_w9h0jn.png"
   alt="Right Logo"
   className="w-20 sm:w-28 md:w-36 lg:w-44 object-contain"
 />
@@ -42,7 +42,7 @@ const HeroSection = () => {
     In collaboration with
   </p>
   <img
-    src="/collabLogo.png"
+    src="https://res.cloudinary.com/dcbdnrlft/image/upload/v1759816082/collabLogo_jgpvs3.png"
     alt="Collaborating Logo"
     className="w-56 sm:w-72 md:w-80 lg:w-96 xl:w-[28rem] mx-auto mt-2 object-contain drop-shadow-[0_0_35px_rgba(0,255,255,0.7)]"
   />
