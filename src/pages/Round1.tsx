@@ -5,7 +5,7 @@ import ParticleBackground from "@/components/ParticleBackground";
 
 const Round1 = () => {
   return (
-    <div className="relative min-h-screen overflow-hidden">
+    <div className="relative min-h-screen overflow-hidden text-white">
       <ParticleBackground />
 
       {/* --- Container --- */}
@@ -45,8 +45,8 @@ const Round1 = () => {
           </div>
           <p className="text-gray-300 leading-relaxed text-lg">
             In this round, participants will race to craft the most creative and
-            effective AI prompts. Each team should complete all challenge based on a futuristic Diwali theme.
-            Using Google Gemini, teams must translate imagination into reality —
+            effective AI prompts. Each team should complete all challenges based on a futuristic Diwali theme.
+            Using Google Gemini, teams must translate imagination into reality — 
             with precision, creativity, and AI intuition.
           </p>
 
@@ -69,11 +69,14 @@ const Round1 = () => {
           <ul className="space-y-4 text-gray-300 leading-relaxed">
             <li>• Diwali in 2025 with futuristic eco-friendly celebrations.</li>
             <li>• Rangoli design inspired by neural networks and AI patterns.</li>
-            <li>
-              • Diwali on Mars — astronauts lighting diyas in a space station.
-            </li>
+            <li>• Diwali on Mars — astronauts lighting diyas in a space station.</li>
             <li>• Diwali celebration in a holographic Ayodhya city.</li>
           </ul>
+
+          {/* Newly added line */}
+          <p className="mt-6 text-pink-400 font-semibold text-center text-lg">
+            ⚠️ All tasks should be completed to reach the next round.
+          </p>
         </div>
 
         {/* Judging Criteria */}
@@ -129,9 +132,8 @@ const Round1 = () => {
           </div>
           <ul className="space-y-4 text-gray-300 leading-relaxed mt-4">
             <li>• Time limit: 1 hour total for both tasks.</li>
-            <li>• All prompts must be generated using Google Gemini.</li>
             <li>
-              • Submit final outputs (screenshots or downloaded files) before
+              • Submit final outputs before
               time ends.
             </li>
             <li>

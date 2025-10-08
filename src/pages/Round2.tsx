@@ -59,7 +59,7 @@ const Round2 = () => {
           <div className="flex flex-wrap justify-center gap-6 mt-6 text-gray-300">
             <div className="flex items-center gap-2">
               <Clock className="w-5 h-5 text-purple-400" />
-              <span>Time Limit: 1 hour 15 minutes</span>
+              <span>Time Limit: 1 hour</span>
             </div>
             <div className="flex items-center gap-2">
               <Trophy className="w-5 h-5 text-pink-400" />
