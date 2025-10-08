@@ -12,7 +12,7 @@ const RoundsSection = () => {
       color: "cyan" as const,
       icon: <Zap className="w-10 h-10 sm:w-12 sm:h-12 text-cyan-400" />,
       link: "/round-1",
-      locked: false,
+      locked: ture,
     },
     {
       number: 2,
@@ -22,7 +22,7 @@ const RoundsSection = () => {
       color: "purple" as const,
       icon: <Sparkles className="w-10 h-10 sm:w-12 sm:h-12 text-purple-400" />,
       link: "/round-2",
-      locked: false,
+      locked: true,
     },
     {
       number: 3,
@@ -32,7 +32,7 @@ const RoundsSection = () => {
       color: "pink" as const,
       icon: <Trophy className="w-10 h-10 sm:w-12 sm:h-12 text-pink-400" />,
       link: "/round-3",
-      locked: false,
+      locked: true,
     },
   ];
 
