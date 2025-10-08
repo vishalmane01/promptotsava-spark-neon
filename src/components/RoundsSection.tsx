@@ -12,7 +12,7 @@ const RoundsSection = () => {
       color: "cyan" as const,
       icon: <Zap className="w-10 h-10 sm:w-12 sm:h-12 text-cyan-400" />,
       link: "/round-1",
-      locked: ture,
+      locked: true,
     },
     {
       number: 2,
