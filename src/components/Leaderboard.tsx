@@ -14,14 +14,26 @@ interface LeaderboardEntry {
   round2: number;
   round3: number;
   total: number;
+  elimination?: boolean; // 👈 added optional field
 }
 
 const Leaderboard = () => {
   const leaderboardData: LeaderboardEntry[] = [
-    { teamName: "Team 1", round1:0 , round2: 0, round3: 0, total: 0 },
-    { teamName: "Team 2", round1:0 , round2: 0, round3: 0, total: 0 },
-    { teamName: "Team 3", round1:0 , round2: 0, round3: 0, total: 0 },
-    
+    { teamName: "Team 1", round1: 0, round2: 0, round3: 0, total: 0 },
+    { teamName: "Team 2", round1: 0, round2: 0, round3: 0, total: 0 },
+    { teamName: "Team 3", round1: 0, round2: 0, round3: 0, total: 0 },
+    { teamName: "Team 4", round1: 0, round2: 0, round3: 0, total: 0 },
+    { teamName: "Team 5", round1: 0, round2: 0, round3: 0, total: 0 },
+    { teamName: "Team 6", round1: 0, round2: 0, round3: 0, total: 0 },
+    { teamName: "Team 7", round1: 0, round2: 0, round3: 0, total: 0 },
+    { teamName: "Team 8", round1: 0, round2: 0, round3: 0, total: 0 },
+    { teamName: "Team 9", round1: 0, round2: 0, round3: 0, total: 0 },
+    { teamName: "Team 10", round1: 0, round2: 0, round3: 0, total: 0 },
+    { teamName: "Team 11", round1: 0, round2: 0, round3: 0, total: 0 },
+    { teamName: "Team 12", round1: 0, round2: 0, round3: 0, total: 0 },
+    { teamName: "Team 13", round1: 0, round2: 0, round3: 0, total: 0 , elimination: true }, 
+    { teamName: "Team 14", round1: 0, round2: 0, round3: 0, total: 0, elimination: true }, 
+    { teamName: "Team 15", round1: 0, round2: 0, round3: 0, total: 0 , elimination: true },
   ];
 
   const sortedData = leaderboardData
@@ -41,7 +53,11 @@ const Leaderboard = () => {
     }
   };
 
-  const getRankStyle = (rank: number) => {
+  const getRankStyle = (rank: number, elimination?: boolean) => {
+    if (elimination) {
+      return "bg-red-900/30 text-red-400 border border-red-400/30 animate-pulse"; // 👈 red color for eliminated
+    }
+
     switch (rank) {
       case 1:
         return "bg-gradient-to-r from-yellow-400/20 via-yellow-300/20 to-yellow-400/10 text-glow-gold";
@@ -73,22 +89,22 @@ const Leaderboard = () => {
         <Table className="min-w-[600px]">
           <TableHeader>
             <TableRow className="bg-black/30 border-b border-primary/20">
-              <TableHead className="text-left text-sm sm:text-base md:text-lg font-bold text-glow-cyan">
+              <TableHead className="text-left font-bold text-glow-cyan">
                 Rank
               </TableHead>
-              <TableHead className="text-left text-sm sm:text-base md:text-lg font-bold text-glow-cyan">
+              <TableHead className="text-left font-bold text-glow-cyan">
                 Team Name
               </TableHead>
-              <TableHead className="text-center text-sm sm:text-base md:text-lg font-bold text-glow-cyan">
+              <TableHead className="text-center font-bold text-glow-cyan">
                 R1
               </TableHead>
-              <TableHead className="text-center text-sm sm:text-base md:text-lg font-bold text-glow-cyan">
+              <TableHead className="text-center font-bold text-glow-cyan">
                 R2
               </TableHead>
-              <TableHead className="text-center text-sm sm:text-base md:text-lg font-bold text-glow-cyan">
+              <TableHead className="text-center font-bold text-glow-cyan">
                 R3
               </TableHead>
-              <TableHead className="text-center text-sm sm:text-base md:text-lg font-bold text-glow-cyan">
+              <TableHead className="text-center font-bold text-glow-cyan">
                 Total
               </TableHead>
             </TableRow>
@@ -98,26 +114,21 @@ const Leaderboard = () => {
               <TableRow
                 key={entry.rank}
                 className={`transition-all hover:scale-[1.01] hover:shadow-[0_0_20px_rgba(255,255,255,0.2)] ${getRankStyle(
-                  entry.rank
+                  entry.rank,
+                  entry.elimination
                 )}`}
               >
-                <TableCell className="font-bold text-sm sm:text-base md:text-lg">
+                <TableCell className="font-bold">
                   <span className="mr-2">{getMedalEmoji(entry.rank)}</span>
                   {entry.rank}
                 </TableCell>
-                <TableCell className="text-sm sm:text-base md:text-lg font-semibold">
+                <TableCell className="font-semibold">
                   {entry.teamName}
                 </TableCell>
-                <TableCell className="text-center text-sm sm:text-base">
-                  {entry.round1}
-                </TableCell>
-                <TableCell className="text-center text-sm sm:text-base">
-                  {entry.round2}
-                </TableCell>
-                <TableCell className="text-center text-sm sm:text-base">
-                  {entry.round3}
-                </TableCell>
-                <TableCell className="text-center font-bold text-sm sm:text-base md:text-lg">
+                <TableCell className="text-center">{entry.round1}</TableCell>
+                <TableCell className="text-center">{entry.round2}</TableCell>
+                <TableCell className="text-center">{entry.round3}</TableCell>
+                <TableCell className="text-center font-bold">
                   {entry.total}
                 </TableCell>
               </TableRow>

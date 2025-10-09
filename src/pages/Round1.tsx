@@ -46,7 +46,7 @@ const Round1 = () => {
           <p className="text-gray-300 leading-relaxed text-lg">
             In this round, participants will race to craft the most creative and
             effective AI prompts. Each team should complete all challenges based on a futuristic Diwali theme.
-            Using Google Gemini, teams must translate imagination into reality — 
+            Using any Generative AI, teams must translate imagination into reality — 
             with precision, creativity, and AI intuition.
           </p>
 
@@ -131,7 +131,7 @@ const Round1 = () => {
             📜 Rules
           </div>
           <ul className="space-y-4 text-gray-300 leading-relaxed mt-4">
-            <li>• Time limit: 1 hour total for both tasks.</li>
+            <li>• Time limit: 45 minutes total for all tasks.</li>
             <li>
               • Submit final outputs before
               time ends.
