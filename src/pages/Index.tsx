@@ -11,7 +11,7 @@ const Index = () => {
 
       <HeroSection />
       <RoundsSection />
-      <Leaderboard />
+      {/* <Leaderboard /> */}
     </div>
   );
 };

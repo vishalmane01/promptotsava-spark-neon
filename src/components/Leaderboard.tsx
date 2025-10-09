@@ -30,7 +30,7 @@ const Leaderboard = () => {
     { teamName: "Team 9", round1: 0, round2: 0, round3: 0, total: 0 },
     { teamName: "Team 10", round1: 0, round2: 0, round3: 0, total: 0 },
     { teamName: "Team 11", round1: 0, round2: 0, round3: 0, total: 0 },
-    { teamName: "Team 12", round1: 0, round2: 0, round3: 0, total: 0 },
+    { teamName: "Team 12", round1: 0, round2: 0, round3: 0, total: 0 , elimination: true },
     { teamName: "Team 13", round1: 0, round2: 0, round3: 0, total: 0 , elimination: true }, 
     { teamName: "Team 14", round1: 0, round2: 0, round3: 0, total: 0, elimination: true }, 
     { teamName: "Team 15", round1: 0, round2: 0, round3: 0, total: 0 , elimination: true },

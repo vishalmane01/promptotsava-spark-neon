@@ -22,7 +22,7 @@ const RoundsSection = () => {
       color: "purple" as const,
       icon: <Sparkles className="w-10 h-10 sm:w-12 sm:h-12 text-purple-400" />,
       link: "/round-2",
-      locked: true,
+      locked: false,
     },
     {
       number: 3,

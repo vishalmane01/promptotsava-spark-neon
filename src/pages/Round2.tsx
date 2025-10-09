@@ -11,9 +11,9 @@ const Round2 = () => {
       text: "Create a cinematic video exploring the moment an AI becomes self-aware, focusing on emotions like isolation and existential reflection with abstract and visually striking effects."
     },
     {
-      title: "Future Fireworks (Video)",
-      color: "text-blue-300",
-      text: "Produce a visually stunning video of futuristic, eco-friendly Diwali fireworks, emphasizing vibrant colors, synchronized movements, and a high-tech festive atmosphere."
+      title: "Product Ad Campaign Generation (Video)",
+      color: "text-emerald-300",
+      text: "Select any Star Group product and create a promotional video for an ad campaign that creatively markets the product and effectively conveys its message to the audience."
     },
     {
       title: "Hogwarts Diwali (Video)",
@@ -31,7 +31,7 @@ const Round2 = () => {
 
   const rules = [
     "Each team must complete any 2 tasks.",
-    "Time limit: 1 hour",
+    "Time limit: 45 minutes",
     "Teams must submit final outputs in given time.",
     "Use of pre-made content is not allowed — everything must be AI-generated live.",
     "Judges' decisions are final and binding.",
@@ -59,7 +59,7 @@ const Round2 = () => {
           <div className="flex flex-wrap justify-center gap-6 mt-6 text-gray-300">
             <div className="flex items-center gap-2">
               <Clock className="w-5 h-5 text-purple-400" />
-              <span>Time Limit: 1 hour</span>
+              <span>Time Limit: 45 minutes</span>
             </div>
             <div className="flex items-center gap-2">
               <Trophy className="w-5 h-5 text-pink-400" />
