@@ -23,10 +23,10 @@ const Round3 = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent animate-gradient-x drop-shadow-[0_0_25px_rgba(255,0,255,0.5)]">
-            Grand Finale – Round 3: Prompted Realities
+            Grand Finale – Round 3: Visual Storytelling Challenge
           </h1>
           <p className="text-gray-300 text-lg mt-4 italic">
-            “Where imagination becomes intelligence, and creativity takes form.”
+            “Where imagination becomes identity — and AI brings your story to life.”
           </p>
 
           <div className="flex flex-wrap justify-center gap-6 mt-8 text-gray-300 text-lg">
@@ -47,71 +47,50 @@ const Round3 = () => {
             <Sparkles className="text-yellow-300 w-5 h-5" /> Description
           </h2>
           <p className="text-gray-300 leading-relaxed text-lg">
-            The <b>Grand Finale</b> where brilliance, vision, and artistry collide ⚡. 
-            In <b>Round 3: Prompted Realities</b>, teams will unleash their full potential — 
-            combining technical mastery with boundless creativity. Participants must complete 
-            <span className="text-pink-300 font-semibold"> both tasks</span> to finish the round successfully. 
-            Each task tests your creative depth, clarity, and ability to evolve prompts into meaningful AI outputs.
+            The <b>Grand Finale</b> challenges you to step into your own story. In this
+            <b> Visual Storytelling Challenge</b>, participants will create an original story
+            where <span className="text-pink-300 font-semibold">you</span> are the main character.
+            Using AI tools like <b>ChatGPT</b> or <b>Gemini</b>, you’ll craft a comic-style
+            storybook — one that visually narrates your journey, emotions, and imagination.
           </p>
         </div>
 
         {/* Task 1 */}
         <div className="p-8 rounded-2xl bg-gradient-to-br from-cyan-900/40 to-indigo-900/20 border border-cyan-500/40 backdrop-blur-md shadow-[0_0_30px_rgba(0,255,255,0.25)] mb-14">
           <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-cyan-300 via-blue-300 to-pink-300 bg-clip-text text-transparent animate-gradient-x">
-            🧩 Task 1: Visual Storytelling Challenge – “Pixels that Speak”
+            🧩 Task 1: Visual Storytelling Challenge – “You Are the Story”
           </h2>
 
           <div className="space-y-5 text-gray-300 leading-relaxed">
             <p>
-              Welcome to the <span className="text-cyan-300 font-semibold">Grand Finale</span> of the competition! 
-              In this round, you will step into the shoes of a <b>visual director</b> and bring your story to life 
-              using <b>AI-generated imagery</b>. Your challenge is to narrate a full story using 
-              <b> only images</b> — no captions, no manual edits, and no text overlays. Every frame must naturally 
-              flow into the next, creating a cohesive and emotionally engaging narrative.
+              You are the protagonist of your own AI-generated adventure. Use <b>ChatGPT</b> or
+              <b> Gemini</b> to craft a <b>comic-style storybook</b> featuring yourself as the main character.
+              Every page should advance the narrative visually and emotionally.
             </p>
 
             <ul className="space-y-2 ml-4 list-disc">
-              <li>Generate <b>exactly 10 images</b> to tell your story — covering <b>introduction, rising action, climax, and resolution</b>.</li>
-              <li>Maintain <b>consistent characters, lighting, perspective, and art style</b> throughout all images.</li>
-              <li>No external editing, Photoshop, or post-processing is allowed.</li>
-              <li>Creativity is key! Use composition, color palettes, and visual storytelling techniques to evoke emotion and convey plot.</li>
-              <li>Focus on clarity — judges should be able to understand the story without any words or captions.</li>
+              <li>Develop a creative story concept centered around <b>yourself</b>.</li>
+              <li>Upload or use reference images to define your <b>character’s look and personality</b>.</li>
+              <li>Use <b>ChatGPT</b> or <b>Gemini</b> to generate visuals and storyline for each page.</li>
+              <li>Ensure your character remains <b>consistent</b> across all pages.</li>
+              <li>The storybook must contain <b>8–12 pages</b> in total.</li>
+              <li>
+                <b>Do not use Gemini’s “storybook” feature</b> — all story visuals and text must be created manually through prompting.
+              </li>
+              <li>Add audio or text for the story.</li>
+              <li>Creativity, visual appeal, and narrative flow are key to success.</li>
             </ul>
 
             <p>
-              Think of each image as a <b>frame in a cinematic sequence</b>. Use consistent prompt parameters, 
-              camera angles, character design, and color schemes to ensure a smooth visual flow. Judges will evaluate 
-              <b> narrative coherence, creativity, emotional impact, and visual consistency</b>. 
-              This is your chance to make your “pixels speak” and show your mastery in AI-driven storytelling.
+              Your challenge is to seamlessly blend creativity with AI-driven storytelling. 
+              This task tests your ability to conceptualize, visualize, and narrate your own world using minimal tools.
             </p>
 
             <p className="text-sm text-cyan-200/80 italic">
-              💡 Tip: Plan your story first — sketch the sequence, define character traits and settings, 
-              and then design prompts that maintain style and tone across all frames.
+              💡 Tip: Focus on <b>character consistency</b> and emotional depth. Let each page unfold naturally — 
+              showing growth, conflict, and resolution — all through your AI-created visuals.
             </p>
           </div>
-        </div>
-
-        {/* Task 2 */}
-        <div className="p-8 rounded-2xl bg-gradient-to-br from-purple-900/40 to-pink-900/30 border border-purple-500/40 backdrop-blur-md shadow-[0_0_40px_rgba(255,0,255,0.3)] mb-14">
-          <h2 className="text-3xl font-bold mb-6 text-pink-300">
-            🧠 Task 2: The “One Word” Prompt Challenge
-          </h2>
-          <p className="text-gray-300 leading-relaxed text-lg mb-4">
-            In this ultimate test of prompt craftsmanship, participants will begin with just <b>one word</b> — 
-            their chosen seed — and transform it into a complete AI-generated creation through intelligent prompting.
-          </p>
-
-          <ul className="space-y-2 ml-4 list-disc text-gray-300">
-            <li>Choose one single word as your base prompt (e.g., <i>Echo, Glass, Rebirth, Chaos, Dream, Silence</i>).</li>
-            <li>Start generating using that single word — no phrases or compound words allowed.</li>
-            <li>Refine the AI’s outputs through progressive prompts — each new prompt should expand, clarify, or enhance the concept while staying true to the original word’s essence.</li>
-            <li>Present your final output (text, image, or both) along with a prompt chain summary showing how your idea evolved.</li>
-          </ul>
-
-          <p className="text-sm text-pink-200/80 italic mt-3">
-            💡 Both Task 1 and Task 2 must be completed to finish Round 3.
-          </p>
         </div>
 
         {/* Judging Criteria */}
@@ -124,28 +103,28 @@ const Round3 = () => {
           <div className="grid sm:grid-cols-2 gap-8">
             {[
               {
-                title: "Narrative Coherence",
+                title: "Character Consistency",
                 color: "text-cyan-400",
                 marks: "10 Marks",
-                desc: "How clearly and smoothly the story or idea flows from start to end.",
+                desc: "The main character’s appearance and personality remain uniform throughout all pages.",
               },
               {
-                title: "Creativity & Originality",
+                title: "Visual Appeal",
                 color: "text-purple-400",
                 marks: "10 Marks",
-                desc: "How innovative, artistic, and imaginative the overall work is.",
+                desc: "Creativity and effective use of AI tools to enhance storytelling and aesthetics.",
               },
               {
-                title: "Prompt Evolution",
+                title: "Storytelling Quality",
                 color: "text-pink-400",
                 marks: "10 Marks",
-                desc: "How intelligently and logically prompts evolve from minimal input to a complete idea.",
+                desc: "Originality, clarity, and engagement of the narrative from start to finish.",
               },
               {
-                title: "Visual Consistency & Aesthetic",
+                title: "AI Integration",
                 color: "text-yellow-400",
                 marks: "10 Marks",
-                desc: "Consistency in characters, lighting, color, and visual tone across frames.",
+                desc: "Skillful use of ChatGPT or Gemini to conceptualize, visualize, and refine the story.",
               },
             ].map((item, i) => (
               <div
@@ -164,7 +143,7 @@ const Round3 = () => {
 
         {/* Footer */}
         <div className="text-center mt-16 text-gray-400 text-sm italic">
-          ✨ “This is where creativity meets mastery — let your prompts paint worlds.” ✨
+          ✨ “Your story is the canvas — let AI paint it vividly.” ✨
         </div>
       </div>
     </div>

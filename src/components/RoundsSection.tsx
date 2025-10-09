@@ -32,7 +32,7 @@ const RoundsSection = () => {
       color: "pink" as const,
       icon: <Trophy className="w-10 h-10 sm:w-12 sm:h-12 text-pink-400" />,
       link: "/round-3",
-      locked: true,
+      locked: false,
     },
   ];
 
